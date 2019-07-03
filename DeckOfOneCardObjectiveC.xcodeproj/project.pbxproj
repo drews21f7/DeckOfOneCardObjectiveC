@@ -13,6 +13,8 @@
 		3AF0F67722CBE923008FA8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0F67622CBE923008FA8E4 /* Assets.xcassets */; };
 		3AF0F67A22CBE923008FA8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AF0F67822CBE923008FA8E4 /* LaunchScreen.storyboard */; };
 		3AF0F67D22CBE923008FA8E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0F67C22CBE923008FA8E4 /* main.m */; };
+		3AF0F68622CBEE1A008FA8E4 /* DVMCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0F68522CBEE1A008FA8E4 /* DVMCard.m */; };
+		3AF0F68A22CBF94C008FA8E4 /* DVMCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AF0F68922CBF94C008FA8E4 /* DVMCardController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		3AF0F67922CBE923008FA8E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AF0F67B22CBE923008FA8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AF0F67C22CBE923008FA8E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AF0F68422CBEE1A008FA8E4 /* DVMCard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVMCard.h; sourceTree = "<group>"; };
+		3AF0F68522CBEE1A008FA8E4 /* DVMCard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVMCard.m; sourceTree = "<group>"; };
+		3AF0F68822CBF94C008FA8E4 /* DVMCardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DVMCardController.h; sourceTree = "<group>"; };
+		3AF0F68922CBF94C008FA8E4 /* DVMCardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DVMCardController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +64,45 @@
 		3AF0F66C22CBE921008FA8E4 /* DeckOfOneCardObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
-				3AF0F66D22CBE921008FA8E4 /* AppDelegate.h */,
-				3AF0F66E22CBE921008FA8E4 /* AppDelegate.m */,
 				3AF0F67022CBE921008FA8E4 /* ViewController.h */,
 				3AF0F67122CBE921008FA8E4 /* ViewController.m */,
 				3AF0F67322CBE921008FA8E4 /* Main.storyboard */,
+				3AF0F68322CBEC55008FA8E4 /* Resources */,
+				3AF0F68722CBEE1F008FA8E4 /* Models */,
+				3AF0F68B22CBF950008FA8E4 /* Model Controller */,
+			);
+			path = DeckOfOneCardObjectiveC;
+			sourceTree = "<group>";
+		};
+		3AF0F68322CBEC55008FA8E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0F66D22CBE921008FA8E4 /* AppDelegate.h */,
+				3AF0F66E22CBE921008FA8E4 /* AppDelegate.m */,
 				3AF0F67622CBE923008FA8E4 /* Assets.xcassets */,
 				3AF0F67822CBE923008FA8E4 /* LaunchScreen.storyboard */,
 				3AF0F67B22CBE923008FA8E4 /* Info.plist */,
 				3AF0F67C22CBE923008FA8E4 /* main.m */,
 			);
-			path = DeckOfOneCardObjectiveC;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3AF0F68722CBEE1F008FA8E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0F68422CBEE1A008FA8E4 /* DVMCard.h */,
+				3AF0F68522CBEE1A008FA8E4 /* DVMCard.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AF0F68B22CBF950008FA8E4 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3AF0F68822CBF94C008FA8E4 /* DVMCardController.h */,
+				3AF0F68922CBF94C008FA8E4 /* DVMCardController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF0F67222CBE921008FA8E4 /* ViewController.m in Sources */,
+				3AF0F68A22CBF94C008FA8E4 /* DVMCardController.m in Sources */,
+				3AF0F68622CBEE1A008FA8E4 /* DVMCard.m in Sources */,
 				3AF0F67D22CBE923008FA8E4 /* main.m in Sources */,
 				3AF0F66F22CBE921008FA8E4 /* AppDelegate.m in Sources */,
 			);
@@ -287,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = DeckOfOneCardObjectiveC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeckOfOneCardObjectiveC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 49NKW8MQX9;
-				INFOPLIST_FILE = DeckOfOneCardObjectiveC/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DeckOfOneCardObjectiveC/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
